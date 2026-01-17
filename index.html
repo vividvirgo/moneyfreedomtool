@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MoneyFreedomTool – FIRE Calculator</title>
+  <meta name="description" content="Calculate your FIRE number and see when you can retire early. Simple, fast financial independence calculator." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>Money Freedom FIRE Calculator</h1>
+    <p>Estimate how much you need to achieve Financial Independence and Retire Early (FIRE).</p>
+
+    <div class="calculator">
+      <label>Annual Living Expenses ($)</label>
+      <input type="number" id="expenses" placeholder="Example: 40000" />
+
+      <label>Current Savings ($)</label>
+      <input type="number" id="savings" placeholder="Example: 120000" />
+
+      <label>Annual Investment Return (%)</label>
+      <input type="number" id="returnRate" placeholder="Example: 7" />
+
+      <label>Annual Savings Contribution ($)</label>
+      <input type="number" id="contribution" placeholder="Example: 15000" />
+
+      <button onclick="calculateFIRE()">Calculate My FIRE</button>
+
+      <div class="results" id="results"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+Add index.html
