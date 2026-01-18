@@ -1,21 +1,30 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f6f8fb;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #f6f8fb, #eef2f7);
   margin: 0;
   padding: 0;
+  color: #1f2933;
 }
 
 .container {
-  max-width: 600px;
-  margin: 40px auto;
+  max-width: 620px;
+  margin: 60px auto;
   background: white;
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 36px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
 h1 {
   text-align: center;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+p {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 25px;
 }
 
 .calculator {
@@ -24,35 +33,60 @@ h1 {
 }
 
 label {
-  margin-top: 15px;
-  font-weight: bold;
+  margin-top: 14px;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 input {
-  padding: 10px;
-  margin-top: 5px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
 }
 
 button {
-  margin-top: 20px;
-  padding: 12px;
+  margin-top: 26px;
+  padding: 14px;
   background: #2563eb;
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 10px;
   cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: background 0.2s ease, transform 0.1s ease;
 }
 
 button:hover {
   background: #1e4fd6;
+  transform: translateY(-1px);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 .results {
-  margin-top: 20px;
-  padding: 15px;
+  margin-top: 24px;
+  padding: 18px;
   background: #eef3ff;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 16px;
+  line-height: 1.5;
 }
+
+@media (max-width: 600px) {
+  .container {
+    margin: 20px;
+    padding: 24px;
+  }
+}
+
