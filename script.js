@@ -10,19 +10,17 @@ function calculateFIRE() {
   }
 
   const fireNumber = expenses * 25;
-
+  let portfolio = savings;
   let years = 0;
-  let balance = savings;
 
-  while (balance < fireNumber && years < 100) {
-    balance = balance * (1 + returnRate) + contribution;
+  while (portfolio < fireNumber && years < 100) {
+    portfolio = portfolio * (1 + returnRate) + contribution;
     years++;
   }
 
   document.getElementById("results").innerHTML = `
-    🔥 Your FIRE Number: $${fireNumber.toLocaleString()} <br>
-    💰 Projected Portfolio: $${Math.round(balance).toLocaleString()} <br>
+    🔥 Your FIRE Number: $${fireNumber.toLocaleString()}<br>
+    💰 Projected Portfolio: $${portfolio.toLocaleString()}<br>
     ⏳ Estimated Years to FIRE: ${years}
   `;
 }
-
